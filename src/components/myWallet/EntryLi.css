@@ -1,0 +1,14 @@
+.entry-li {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.expense-entry {
+    border: 2ps solid red; 
+    background-color: #ffd6cc;
+}
+.gain-entry {
+    border: 2ps solid green; 
+    background-color: #e6ffe6;
+}
