@@ -18,7 +18,7 @@ const MyWallet: React.FC = () => {
   const [entries, setEntries] = useState(initialEntries);
 
   const addEntry:AddEntry = (newEntry) => {
-    setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:"expense", id: uuidv4()}])
+    setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:newEntry.category, id: uuidv4()}])
   };
 
   return (

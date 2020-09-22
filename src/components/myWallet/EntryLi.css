@@ -3,17 +3,18 @@
     height: 100px;
     border-radius: 5px;
     padding: 10px;
-    border: 2px solid plum;
+    /* border: 2px solid plum; */
     font-size: 24px;
     list-style-type: none;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     color: black;
+    margin: 10px;
 }
-/* .expense-entry {
-    border: 2ps solid red; 
+.expense-entry {
+    border: 2px solid red; 
     background-color: #ffd6cc;
 }
 .gain-entry {
-    border: 2ps solid green; 
+    border: 2px solid green; 
     background-color: #e6ffe6;
-} */
+}
