@@ -2,25 +2,3 @@ h1 {
     font-size: 24px;
     text-align: center;
 }
-label {
-    color: purple;
-    display: block;
-    text-align: center;
-}
-input {
-    border: 1ps solid blue;
-    border-radius: 5px;
-    width: 250px;
-    background-color: #f6f6f6;
-    display: block;
-    margin: auto;
-}
-.entry-form-container {
-    border: 2px solid yellow;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: auto;
-    margin-top: 100px;
-}

@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import './EntryLi.css';
+import { Entry } from '../entry.d'
 
 interface EntryLiProps {
-    entry: {
-        amount: number;
-        reason: string;
-        category: string;
-        id: number
-    }
+    entry: Entry;
 }
 
 const EntryLi: React.FC<EntryLiProps> = ({entry}) => {

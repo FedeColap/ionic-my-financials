@@ -1,14 +1,19 @@
 .entry-li {
     width: 300px;
-    height: 150px;
+    height: 100px;
     border-radius: 5px;
     padding: 10px;
+    border: 2px solid plum;
+    font-size: 24px;
+    list-style-type: none;
+    background-color: #f8f8f8;
+    color: black;
 }
-.expense-entry {
+/* .expense-entry {
     border: 2ps solid red; 
     background-color: #ffd6cc;
 }
 .gain-entry {
     border: 2ps solid green; 
     background-color: #e6ffe6;
-}
+} */
