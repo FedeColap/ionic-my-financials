@@ -3,6 +3,7 @@ export type Entry = {
     amount: number | undefined;
     category: string;
     id: string;
+    datetime: object;
 }
 
 export type AddEntry = (newEntry: Entry) => void

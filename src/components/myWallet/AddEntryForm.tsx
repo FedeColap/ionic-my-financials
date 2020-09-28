@@ -27,7 +27,8 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({addEntry}) => {
             reason: newReason,
             amount: newAmount,
             category: selected,
-            id: uuidv4()
+            id: uuidv4(),
+            datetime: new Date() 
         }
         addEntry(newEntry);
     }

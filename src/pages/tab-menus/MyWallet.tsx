@@ -9,16 +9,16 @@ import AddEntryForm from '../../components/myWallet/AddEntryForm';
 
 
 const initialEntries: Array<Entry> =[
-  {reason: "Groceries", amount: 100, category: "expense", id: uuidv4()},
-  {reason: "Doggo Collar", amount: 30, category: "expense", id: uuidv4()},
-  {reason: "Chipotle dinner", amount: 15, category: "expense", id: uuidv4()}
+  {reason: "Groceries", amount: 100, category: "expense", id: uuidv4(), datetime: new Date() },
+  {reason: "Doggo Collar", amount: 30, category: "expense", id: uuidv4(), datetime: new Date() },
+  {reason: "Chipotle dinner", amount: 15, category: "expense", id: uuidv4(), datetime: new Date() }
 ]
 
 const MyWallet: React.FC = () => {
   const [entries, setEntries] = useState(initialEntries);
 
   const addEntry:AddEntry = (newEntry) => {
-    setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:newEntry.category, id: uuidv4()}])
+    setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:newEntry.category, id: uuidv4(), datetime: new Date()}])
   };
 
   return (

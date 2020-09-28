@@ -18,3 +18,7 @@
     border: 2px solid green; 
     background-color: #e6ffe6;
 }
+.entry-li-date {
+    font-size: 10px;
+    font-style: italic;
+}
