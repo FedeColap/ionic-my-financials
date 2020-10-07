@@ -21,9 +21,9 @@ const MyWallet: React.FC = () => {
     setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:newEntry.category, id: uuidv4(), datetime: new Date()}])
   };
   const handleDeleteItem:deleteEntry = (deleteThisEntryID) =>{
-    console.log('handle delete item called')
-    // const newItems = entries.filter(itm => itm !== item)
-    // setEntries(newItems)
+    console.log('handle delete item called', deleteThisEntryID)
+    const newItems = entries.filter(itm => itm.id !== deleteThisEntryID)
+    setEntries(newItems)
   }
 
   return (
