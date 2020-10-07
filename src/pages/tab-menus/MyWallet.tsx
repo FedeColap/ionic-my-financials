@@ -4,14 +4,14 @@ import { add } from 'ionicons/icons';
 import './MyWallet.css';
 import ExpensesList from '../../components/myWallet/ExpensesList';
 import { v4 as uuidv4 } from 'uuid';
-import { Entry, AddEntry } from '../../components/entry.d'
+import { Entry, AddEntry, deleteEntry } from '../../components/entry.d'
 import AddEntryForm from '../../components/myWallet/AddEntryForm';
 
 
 const initialEntries: Array<Entry> =[
-  {reason: "Groceries", amount: 100, category: "expense", id: uuidv4(), datetime: new Date() },
-  {reason: "Doggo Collar", amount: 30, category: "expense", id: uuidv4(), datetime: new Date() },
-  {reason: "Chipotle dinner", amount: 15, category: "expense", id: uuidv4(), datetime: new Date() }
+  {reason: "Groceries", amount: 100, category: "expense", id: uuidv4(), datetime: new Date()},
+  {reason: "Doggo Collar", amount: 30, category: "expense", id: uuidv4(), datetime: new Date()},
+  {reason: "Chipotle dinner", amount: 15, category: "expense", id: uuidv4(), datetime: new Date()}
 ]
 
 const MyWallet: React.FC = () => {
@@ -20,6 +20,11 @@ const MyWallet: React.FC = () => {
   const addEntry:AddEntry = (newEntry) => {
     setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:newEntry.category, id: uuidv4(), datetime: new Date()}])
   };
+  const handleDeleteItem:deleteEntry = (deleteThisEntryID) =>{
+    console.log('handle delete item called')
+    // const newItems = entries.filter(itm => itm !== item)
+    // setEntries(newItems)
+  }
 
   return (
     <IonPage>
@@ -29,7 +34,7 @@ const MyWallet: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <ExpensesList entries={entries}/>
+        <ExpensesList entries={entries} onDeleteItem={handleDeleteItem}/>
         <AddEntryForm addEntry={addEntry}/>
       </IonContent>
     </IonPage>

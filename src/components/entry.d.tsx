@@ -7,3 +7,5 @@ export type Entry = {
 }
 
 export type AddEntry = (newEntry: Entry) => void
+
+export type deleteEntry = (deleteThisEntryID: Entry["id"]) => void
