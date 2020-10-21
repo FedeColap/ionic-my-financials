@@ -32,16 +32,6 @@ const AddEntryForm: React.FC<AddEntryFormProps> = ({addEntry}) => {
         }
         addEntry(newEntry);
     }
-    // const handleSubmit = (e: React.MouseEvent<HTMLIonButtonElement, MouseEvent>) => {
-    //     e.preventDefault();
-    //     const newEntry = {
-    //         reason: newReason,
-    //         amount: newAmount,
-    //         category: 'expense',
-    //         id: uuidv4()
-    //     }
-    //     addEntry(newEntry);
-    // }
     
 
     return (

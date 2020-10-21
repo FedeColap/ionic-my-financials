@@ -16,17 +16,10 @@ const EntryLi: React.FC<EntryLiProps> = ({entry, onDeleteItem}) => {
                 <button type='button' onClick={()=> {onDeleteItem(entry.id)}}>delete</button>
                 <div className="entry-li-date">{entry.datetime.toLocaleString()}</div>
             </li>
-    )} else if (entry.category === "gain") {
+    )} else {
         return(
             <li className="entry-li gain-entry " key ={entry.id}>
                 {entry.amount}$ have been gained for {entry.reason}
-                <button type='button' onClick={()=> {onDeleteItem(entry.id)}}>delete</button>
-                <div className="entry-li-date">{entry.datetime.toLocaleString()}</div>
-            </li>
-    )} else {
-        return(
-            <li className="entry-li" key ={entry.id}>
-                {entry.amount}$ have been moved for {entry.reason}
                 <button type='button' onClick={()=> {onDeleteItem(entry.id)}}>delete</button>
                 <div className="entry-li-date">{entry.datetime.toLocaleString()}</div>
             </li>

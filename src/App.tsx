@@ -10,10 +10,9 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { globe, wallet, grid } from 'ionicons/icons';
+import { wallet, grid } from 'ionicons/icons';
 import MyWallet from './pages/tab-menus/MyWallet';
 import Graphs from './pages/tab-menus/Graphs';
-import Stocks from './pages/tab-menus/Stocks';
 import EntryForm from './pages/EntryForm';
 
 /* Core CSS required for Ionic components to work properly */
@@ -43,7 +42,6 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/my-wallet" component={MyWallet} exact={true} />
           <Route path="/graphs" component={Graphs} exact={true} />
-          <Route path="/stocks" component={Stocks} />
           <Route path="/entry-form" component={EntryForm} />
           <Route path="/" render={() => <Redirect to="/my-wallet" />} exact={true} />
         </IonRouterOutlet>
@@ -55,10 +53,6 @@ const App: React.FC = () => (
           <IonTabButton tab="tab2" href="/graphs">
             <IonIcon icon={grid} />
             <IonLabel>Graphs</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/stocks">
-            <IonIcon icon={globe} />
-            <IonLabel>Stocks</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

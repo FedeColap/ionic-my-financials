@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { IonButton } from '@ionic/react';
 import AddEntryForm from '../components/myWallet/AddEntryForm'
-// import { Entry, AddEntry } from '../../components/entry.d'
+import { Entry, AddEntry } from '../components/entry.d'
+import { v4 as uuidv4 } from 'uuid';
 import './EntryForm.css';
+import ExpensesContext from '../components/myWallet/ExpensesContext'
+
+console.log(ExpensesContext)
 
 const EntryForm: React.FC = () => {
-
-    const [reason, setReason] = useState('');
-    const [amount, setAmount] = useState('');
-    let datetime = new Date();
-    let creationDate = datetime.toLocaleString();
-    const handleSubmit = (e:Event) => {
-        e.preventDefault();
-        console.log(reason);
-    };
-    // const addEntry:AddEntry = (newEntry) => {
-    //   setEntries([...entries, {reason:newEntry.reason, amount:newEntry.amount, category:"expense", id: uuidv4()}])
-    // };    
+  const {entries, addEntry, handleDeleteItem} = useContext(ExpensesContext);
 
   return (
-    <div className="entry-form-container">
-        <h1>Enter your </h1>
-        {/* <form onSubmit={handleSubmit}> */}
-        {/* <AddEntryForm addEntry={}/> */}
-    </div>
+    <ExpensesContext.Consumer>
+      {function renderProp() {
+        return (
+      <div className="entry-form-container"> 
+          <h1>Enter your </h1>
+          {/* <AddEntryForm addEntry={addEntry}/> */}
+      </div> 
+        )
+      }}
+    </ExpensesContext.Consumer>
   );
 };
 
