@@ -8,10 +8,10 @@ import { attachProps } from '@ionic/react/dist/types/components/utils';
 
 interface EntryListProps {
   entries: Array<Entry>,
-  onDeleteItem:deleteEntry
+  handleDeleteItem:deleteEntry
 }
 
-const ExpensesList: React.FC<EntryListProps> = ({ onDeleteItem, entries }) => {
+const ExpensesList: React.FC<EntryListProps> = ({ handleDeleteItem, entries }) => {
 
   
   // const addEntry = () => {
@@ -21,7 +21,7 @@ const ExpensesList: React.FC<EntryListProps> = ({ onDeleteItem, entries }) => {
     <div className="expenses-list-container">
       <ul>
         {entries.map( entry => {
-          return <EntryLi key={entry.id} entry={entry} onDeleteItem={onDeleteItem}/>
+          return <EntryLi key={entry.id} entry={entry} handleDeleteItem={handleDeleteItem}/>
         }
 
         )}

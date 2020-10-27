@@ -9,7 +9,7 @@ import ExpensesContext from '../components/myWallet/ExpensesContext'
 console.log(ExpensesContext)
 
 const EntryForm: React.FC = () => {
-  const {entries, addEntry, handleDeleteItem} = useContext(ExpensesContext);
+  // const {entries, addEntry, handleDeleteItem} = useContext(ExpensesContext);
 
   return (
     <ExpensesContext.Consumer>

@@ -5,14 +5,15 @@ interface IExpensesContext {
     entries: Entry[],
     addEntry: AddEntry,
     handleDeleteItem: deleteEntry,
+    total: number 
 }
-const ExpensesContext = React.createContext<IExpensesContext | undefined>(
+const ExpensesContext = React.createContext<IExpensesContext>(
     {
         entries:[],
         addEntry:() => {},
-        handleDeleteItem:() => {}
+        handleDeleteItem:() => {},
+        total: 0
     }
-
 )
 
 // const ExpensesContext = React.createContext<Partial<IExpensesContext>>({
@@ -20,27 +21,5 @@ const ExpensesContext = React.createContext<IExpensesContext | undefined>(
 //     addEntry:() => {},
 //     handleDeleteItem: () => {}
 // })
-
+// export const ExpensesContext = React.createContext(null);
 export default ExpensesContext;
-
-// import React, {createContext, Component} from 'react';
-
-// // export const ExpensesContext = createContext(null);
-// export const ExpensesContext = React.createContext({
-//   entries: [],
-//   addEntry: () => {},
-//   handleDeleteItem: () => {},
-// })
-
-// class ExpensesContextProvider extends Component {
-
-//     render() {
-//         return(
-//             <ExpensesContext.Provider value={{...ExpensesContext}}>
-//                 {this.props.children}
-//             </ExpensesContext.Provider>
-//         )
-//     }
-// }
-
-// export default ExpensesContextProvider;
